@@ -1,0 +1,36 @@
+{
+    "name": "whirlwind-framework/migration-core",
+    "keywords": [
+        "whirlwind",
+        "migration",
+        "migration core"
+    ],
+    "description": "Whirlwind framework migration tool interface",
+    "type": "library",
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-4": {
+            "Whirlwind\\MigrationCore\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Whirlwind\\MigrationCore\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Tsyganov",
+            "email": "ontroip@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "dg/bypass-finals": "dev-master",
+        "phpunit/phpunit": "10.2.x-dev",
+        "squizlabs/php_codesniffer": "4.0.x-dev"
+    }
+}
