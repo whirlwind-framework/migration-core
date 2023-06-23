@@ -46,7 +46,7 @@ class RollbackCommand extends Command
         $this->info("Total $n " . ($n === 1 ? 'migration' : 'migrations') . ' to be reverted:');
 
         foreach ($migrations as $migration) {
-            $this->output('\t' . $migration['name']);
+            $this->output("\t" . $migration['name']);
         }
 
         $reverted = 0;

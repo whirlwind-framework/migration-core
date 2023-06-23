@@ -48,7 +48,7 @@ class InstallCommand extends Command
         }
 
         foreach ($migrations as $migration) {
-            $this->output('\t' . $migration['name']);
+            $this->output("\t" . $migration['name']);
         }
         $this->output('');
 
