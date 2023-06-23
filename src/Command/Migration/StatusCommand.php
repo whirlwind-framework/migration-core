@@ -40,8 +40,10 @@ class StatusCommand extends Command
                 $this->stdout("Total $n " . ($n === 1 ? 'migration has' : 'migrations have') . ' been applied before:');
             }
             foreach ($migrations as $migration) {
+                $createdAt = \DateTimeImmutable::createFromFormat('YmdHis', (string)$migration['createdAt'])
+                    ->format('Y-m-d H:i:s');
                 $this->output(
-                    "\t(" . \date('Y-m-d H:i:s', $migration['createdAt']) . ') ' . $migration['name']
+                    "\t(" . $createdAt . ') ' . $migration['name']
                 );
             }
         }
