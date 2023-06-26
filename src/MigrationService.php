@@ -83,7 +83,7 @@ class MigrationService
                     $file
                 );
 
-                if (\is_file($path) && \preg_match('/^(.*?(\d{12})).php$/', $file, $matches)
+                if (\is_file($path) && \preg_match('/^(.*?(\d{14,})).php$/', $file, $matches)
                     && !\array_key_exists($matches[1], $applied)
                 ) {
                     $migrationMap[$matches[1]] = [
