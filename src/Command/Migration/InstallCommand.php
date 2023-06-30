@@ -25,7 +25,7 @@ class InstallCommand extends Command
 
     public function run(array $params = []): int
     {
-        $limit = (int) $params[0] ?? 0;
+        $limit = (int) ($params[0] ?? 0);
         $migrations = $this->service->getPendingMigrations($limit);
 
         if (empty($migrations)) {
